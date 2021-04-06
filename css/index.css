@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#first-nav {
+    background: lightgray;
+    text-align: right;
+    padding: 12px;
+}
+
+#second-nav {
+    padding: 12px;
+    background: white;
+}
+
+#second-nav img {
+    height: 60px;
+}
+
+#banner {
+    text-align: center;
+    padding: 80px;
+    background-image: url(https://placeimg.com/1000/300/tech);
+    color: white;
+}
+
+#banner h1,
+#banner button {
+    margin: 12px;
+}
+
+#banner button {
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    padding: 12px 24px;
+}
+
+#banner h1 {
+    font-size: 60px;
+}
+
+#banner .overlay {
+    background: rgba(100,100,100,.4);
+}
+
+#items { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 48px;
+}
+
+#items .item-product {
+    width: 24%;
+    text-align: center;
+    border: 1px solid #999;
+    margin: 12px auto;
+}
+
+#items .item-product img {
+    width: 100%;
+}
+
+#items .item-product p {
+    margin: 12px;
+    line-height: 32px;
+}
+
+.paginacion {
+    border: none;
+    padding: 12px 48px;
+    background: goldenrod;
+}
+
+.paginacion:hover {
+    font-weight: bold;
+    box-shadow: gray 3px 3px 6px;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+.precio-final { 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.descuento {
+    color: forestgreen;
+}
+
+.tachado,
+.precio-final,
+.descuento {
+    display: block;
+}
+
+#footer {
+    height: 200px;
+    background: lightgray;
+}
