@@ -128,6 +128,38 @@ button {
 #footer {
     height: 200px;
     background: lightgray;
+    padding: 24px;
+}
+
+#footer form input {
+    padding: 6px;
+    font-size: 18px;
+    color: steelblue;
+    border: 1px solid cadetblue;
+    border-radius: 3px;
+}
+
+#footer form button {
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 6px;
+    color: white;
+    background: dodgerblue;
+    border: 1px solid dodgerblue;
+}
+
+.cookie {
+    padding: 24px;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0, 0.75);
+    position: sticky;
+    bottom: 0px;
+}
+
+.cookie a {
+    border: none;
+    color: white;
 }
 
 @media screen and (max-width: 768px) {
