@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 3px;
+}
+
+a:hover {
+    /* text-decoration: underline; */
+    border: 1px solid gray;
+    color: red;
+}
+
+/* a:visited {
+    color: #999;
+} */
+
+body,
+button {
+    font-family: 'Work Sans', sans-serif;
+}
+
+#first-nav {
+    background: lightgray;
+    text-align: right;
+    padding: 12px;
+}
+
+#second-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: white;
+}
+
+#second-nav .logo {
+    height: 60px;
+}
+
+#banner {
+    text-align: center;
+    padding: 80px;
+    background-image: url(https://placeimg.com/1000/300/tech);
+    color: white;
+}
+
+#banner h1,
+#banner button {
+    margin: 12px;
+}
+
+#banner button {
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    padding: 12px 24px;
+}
+
+#banner h1 {
+    font-size: 60px;
+}
+
+#banner .overlay {
+    background: rgba(100,100,100,.4);
+}
+
+#items { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 48px;
+}
+
+#items .item-product {
+    width: 24%;
+    text-align: center;
+    border: 1px solid #999;
+    margin: 12px auto;
+}
+
+#items .item-product img {
+    width: 100%;
+}
+
+#items .item-product p {
+    margin: 12px;
+    line-height: 32px;
+}
+
+.paginacion {
+    border: none;
+    padding: 12px 48px;
+    background: goldenrod;
+}
+
+.paginacion:hover {
+    font-weight: bold;
+    box-shadow: gray 3px 3px 6px;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+.precio-final { 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.descuento {
+    color: forestgreen;
+}
+
+.tachado,
+.precio-final,
+.descuento {
+    display: block;
+}
+
+#footer {
+    height: 200px;
+    background: lightgray;
+    padding: 24px;
+}
+
+#footer form input {
+    padding: 6px;
+    font-size: 18px;
+    color: steelblue;
+    border: 1px solid cadetblue;
+    border-radius: 3px;
+}
+
+#footer form button {
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 6px;
+    color: white;
+    background: dodgerblue;
+    border: 1px solid dodgerblue;
+}
+
+.cookie {
+    padding: 24px;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0, 0.75);
+    position: sticky;
+    bottom: 0px;
+}
+
+.cookie a {
+    border: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    #banner {
+        padding: 20px;
+    }
+
+    #banner h1 {
+        font-size: 36px;
+    }
+
+    #items { 
+        padding: 24px;
+    }
+
+    #items .item-product {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #second-nav .logo {
+        height: 36px;
+    }
+
+    #second-nav .second-nav-menu {
+        position: relative;
+    }
+
+    #second-nav .second-nav-links {
+        display: none;
+        position: absolute;
+        top: 36px;
+        right: 0px;
+        background: white;
+    }
+
+    #second-nav .second-nav-hamburger {
+        border: 1px solid gray;
+        text-align: center;
+    }
+
+    #second-nav .second-nav-hamburger:hover + .second-nav-links {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+    #banner {
+        display: none;
+    }
+
+    #items { 
+        padding: 12px;
+    }
+
+    #items .item-product {
+        width: 100%;
+    }
+}
