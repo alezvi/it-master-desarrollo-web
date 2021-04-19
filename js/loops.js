@@ -69,5 +69,9 @@ var links = [
 ]
 
 for (var i = 0; i < links.length; i++) {
-    linksContainer.innerHTML += '<a href="' + links[i].href + '">' + links[i].name + '</a>'
+    linksContainer.innerHTML += generateLink(links[i])
+}
+
+function generateLink(link) {
+    return '<a href="' + link.href + '">' + link.name + '</a>'
 }
