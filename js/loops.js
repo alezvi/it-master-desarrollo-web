@@ -49,22 +49,60 @@ var linksContainer = document.querySelector('.second-nav-links')
 //     'Contacto',
 // ]
 
+var contacts = [
+    {
+        "photo_url" : "...",
+        "name" : "Cosme Fulanito",
+        "last_connection" : "2021-04-19 18:59:34",
+        "last_message" : {
+            "text" : "ahgjdahgsdj",
+            "date" : "2021-04-19 18:59:34",
+            "read" : true
+        }
+    },
+    {
+        "photo_url" : "...",
+        "name" : "Cosme Fulanito",
+        "last_connection" : "2021-04-19 18:59:34",
+        "last_message" : null
+    },
+    {
+        "photo_url" : "...",
+        "name" : "Cosme Fulanito",
+        "last_connection" : "2021-04-19 18:59:34",
+        "last_message" : null
+    },
+]
+
 var links = [
     {
         href : '#home',
         name : 'Home',
+        children : []
     },
     {
         href : '#productos',
         name : 'Productos',
+        children : [
+            {
+                href : "sublink uno",
+                name : "sublink uno"
+            },
+            {
+                href : "sublink dos",
+                name : "sublink dos"
+            },
+        ]
     },
     {
         href : '#nosotros',
         name : 'Nosotros',
+        children : []
     },
     {
         href : '#contacto',
         name : 'Contacto',
+        children : []
     },
 ]
 
@@ -75,3 +113,78 @@ for (var i = 0; i < links.length; i++) {
 function generateLink(link) {
     return '<a href="' + link.href + '">' + link.name + '</a>'
 }
+
+var itemsContainer = document.querySelector('#items')
+
+var products = [
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Uno category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Dos category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Tres category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Cuatro category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+    {
+        photo : "https://placeimg.com/400/400/arch",
+        description : "Product category one product category one product category one product category one product category one"
+    },
+]
+
+var paginacion = document.querySelector('.paginacion')
+
+var cantidadDeResultados = 4
+
+function mostrarItems(q) {
+    for (var i = 0; i < q; i++) {
+        itemsContainer.innerHTML += `
+            <div class="item-product">
+                <img src="${products[i].photo}" alt="Logo Google" />
+                <p>${products[i].description}</p>
+            </div>
+        `
+    }
+}
+
+paginacion.addEventListener('click', function () {
+    cantidadDeResultados = 8
+    mostrarItems(cantidadDeResultados)
+})
+
+mostrarItems(cantidadDeResultados)
